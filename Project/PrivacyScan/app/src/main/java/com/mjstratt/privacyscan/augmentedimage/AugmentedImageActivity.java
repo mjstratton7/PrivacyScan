@@ -331,7 +331,30 @@ public class AugmentedImageActivity extends AppCompatActivity implements GLSurfa
           // When an image is in PAUSED state, but the camera is not PAUSED, it has been detected,
           // but not yet tracked. Stops updating when tracked, to be removed eventually.
           String text = String.format("Detected Image %d \nData: %s", augmentedImage.getIndex(), augmentedImage.getName());
-          messageSnackbarHelper.showMessage(this, text);
+
+          // Data to be parsed, maybe move this all to seperate function
+          // [TYPE][BRAND][MODEL][DATA]
+          String data = augmentedImage.getName();
+
+          // Remove first'[' and last ']'
+          data.substring( 1, data.length() - 1 );
+
+          // Seperate by '][' delimiter to access individual fields
+          String[] proc_data = data.split("]\\[");
+
+          // Process Data into Fields
+          String packageName = getPackageName();
+          int typeID = getResources().getIdentifier(proc_data[0].toString(), "string", packageName);
+          int brandID = getResources().getIdentifier(proc_data[0].toString(), "string", packageName);
+          int dataID = getResources().getIdentifier(proc_data[3].toString(), "string", packageName);
+
+          String outputText = "Type: " + getResources().getString(typeID) +
+                   "\nBrand: " + getResources().getString(brandID) +
+                   "\nModel: " + proc_data[2].toString() +
+                   "\nData: " + getResources().getString(dataID);
+
+          // Printout Data Debug
+          messageSnackbarHelper.showMessage(this, outputText);
 
           break;
 
@@ -373,11 +396,8 @@ public class AugmentedImageActivity extends AppCompatActivity implements GLSurfa
             augmentedImageRenderer.draw(
                     viewmtx, projmtx, augmentedImage, centerAnchor, colorCorrectionRgba);
 
-//            ViewRenderable.builder()
-//                    .setView(this, R.layout.test)
-//                    .build()
-//                    .thenAccept(renderable -> myRenderable = renderable);
 
+            // Inflate 2D renderable view by scanned object in AR, code NOT working.
             ViewRenderable.builder()
                     .setView(this, R.layout.ar_menu)
                     .build()

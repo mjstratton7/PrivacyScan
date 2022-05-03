@@ -16,11 +16,41 @@
 -->
 <resources>
   <string name="app_name">PrivacyScan</string>
-    <string name="ar_menu_touch_prompt">Tap for more info</string>
+  <string name="ar_menu_touch_prompt">Tap for more info</string>
   <string name="ar_menu_capabilities">Capabilities:</string>
   <string name="ar_menu_model">Model:</string>
   <string name="ar_menu_brand">Brand:</string>
   <string name="ar_menu_type">Type:</string>
+
+<!--  Device Types-->
+  <string name="THERMOSTAT">Smart Thermostat</string>
+  <string name="CAMERA">Smart Camera</string>
+  <string name="MICROPHONE">Smart Microphone</string>
+  <string name="MOTION">Smart Motion Sensor</string>
+  <string name="SWITCH">Smart Switching Outlet</string>
+  <string name="LIGHT">Smart Light Bulb</string>
+  <string name="SPEAKER">Smart Speaker</string>
+
+<!--  Device Models-->
+  <string name="NEST_V1">Nest (First Generation</string>
+
+<!--  Device Brands-->
+  <string name="HUE">Hue</string>
+  <string name="SAMSUNG">Samsung</string>
+  <string name="SMARTTHINGS">SmartThings</string>
+  <string name="LOCK">Lock</string>
+  <string name="NEST">Nest</string>
+  <string name="ARLO">Arlo</string>
+  <string name="AUGUST">August</string>
+
+<!--  Data Types-->
+  <string name="DATA">Personally Identifiable Data</string>
+  <string name="SOUND">Sound</string>
+  <string name="VIDEO">Video</string>
+  <string name="PRESENCE">Prescence</string>
+  <string name="LOCATION">Location</string>
+  <string name="NONE">None</string>
+
 
 
 </resources>
