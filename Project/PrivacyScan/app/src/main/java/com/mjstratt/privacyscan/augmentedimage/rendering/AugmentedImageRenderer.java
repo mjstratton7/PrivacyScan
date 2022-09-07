@@ -65,9 +65,9 @@ public class AugmentedImageRenderer {
     imageFrameLowerRight.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
     imageFrameLowerRight.setBlendMode(BlendMode.AlphaBlending);
 
-    DeviceInfo.createOnGlThread(context, "models/anchor.obj", "models/anchor.png");
-    DeviceInfo.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-    DeviceInfo.setBlendMode(BlendMode.AlphaBlending);
+//    DeviceInfo.createOnGlThread(context, "models/anchor.obj", "models/anchor.png");
+//    DeviceInfo.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
+//    DeviceInfo.setBlendMode(BlendMode.AlphaBlending);
   }
 
   public void draw(
@@ -126,9 +126,9 @@ public class AugmentedImageRenderer {
     imageFrameLowerLeft.updateModelMatrix(modelMatrix, scaleFactor);
     imageFrameLowerLeft.draw(viewMatrix, projectionMatrix, colorCorrectionRgba, tintColor);
 
-    worldBoundaryPoses[4].toMatrix(modelMatrix, 0);
-    DeviceInfo.updateModelMatrix(modelMatrix, scaleFactor);
-    DeviceInfo.draw(viewMatrix, projectionMatrix, colorCorrectionRgba, tintColor);
+//    worldBoundaryPoses[4].toMatrix(modelMatrix, 0);
+//    DeviceInfo.updateModelMatrix(modelMatrix, scaleFactor);
+//    DeviceInfo.draw(viewMatrix, projectionMatrix, colorCorrectionRgba, tintColor);
   }
 
   private static float[] convertHexToColor(int colorHex) {

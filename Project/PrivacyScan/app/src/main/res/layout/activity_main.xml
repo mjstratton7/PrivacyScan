@@ -17,6 +17,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
     tools:context="com.mjstratt.privacyscan.augmentedimage.AugmentedImageActivity">
 
   <android.opengl.GLSurfaceView
@@ -24,6 +25,7 @@
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
       android:layout_gravity="top"
+      android:animateLayoutChanges="true"
       />
 
   <ImageView
@@ -32,6 +34,7 @@
       android:layout_height="match_parent"
       android:layout_gravity="center"
       android:scaleType="fitCenter"
+      android:animateLayoutChanges="true"
       />
 
 </FrameLayout>

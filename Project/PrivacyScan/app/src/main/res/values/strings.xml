@@ -45,12 +45,34 @@
 
 <!--  Data Types-->
   <string name="DATA">Personally Identifiable Data</string>
-  <string name="SOUND">Sound</string>
+  <string name="AUDIO">Audio</string>
   <string name="VIDEO">Video</string>
-  <string name="PRESENCE">Prescence</string>
+  <string name="PRESCENCE">Presence</string>      // This typo is propagated in the QR Codes and Augmented Images database, leave.
+  <string name="PRESENCE">Presence</string>
+  <string name="INFORMATION">Information</string>
   <string name="LOCATION">Location</string>
   <string name="NONE">None</string>
 
+<!--  Capability Descriptions-->
+  <string name="DATA_desc">This device has access to personall </string>
+  <string name="AUDIO_desc">This device can record/send any audio of the immediate area.</string>
+  <string name="VIDEO_desc">This device can record/send video of the immediate area.</string>
+  <string name="PRESENCE_desc">This device can determine when certain individuals are nearby via proximity and other sensors.</string>
+  <string name="INFORMATION_desc">This device has access to potentially identifiable information, such as .</string>
+  <string name="LOCATION_desc">This device can </string>
 
+
+<!--  Application Strings-->
+  <string name="bt_off">Bluetooth LE Scanning Off</string>
+  <string name="bt_on">Bluetooth LE Scanning On</string>
+  <string name="device_found_btle">Device Found (BT LE): </string>
+  <string name="device_found">Device Found (QR): </string>
+  <string name="device_data_error">Failed to parse data from BT LE Payload</string>
+
+  <string name="device_info">Device Information</string>
+  <string name="device_info_type">Device Type</string>
+  <string name="device_info_brand">Manufacturer</string>
+  <string name="device_info_model">Model</string>
+  <string name="device_info_datatypes">Device Information</string>
 
 </resources>
